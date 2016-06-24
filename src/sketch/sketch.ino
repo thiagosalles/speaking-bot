@@ -10,7 +10,7 @@
 
 // Digital Pins
 #define RIGHT_SPEAKER_PIN 2
-#define LEFT_SPEAKER_PIN 4
+#define MORSE_LED_PIN 4
 #define TILT_LED_PIN 3
 // Analog Pins
 #define AMPLIFIER_PIN 7
@@ -19,7 +19,7 @@
 // Stores the potentiometer value
 int potVal = 0;
 
-MorseTalk morseTalk(RIGHT_SPEAKER_PIN, TILT_LED_PIN);
+MorseTalk morseTalk(RIGHT_SPEAKER_PIN, MORSE_LED_PIN, TILT_LED_PIN);
 
 // the setup routine runs once when you press reset:
 void setup() {

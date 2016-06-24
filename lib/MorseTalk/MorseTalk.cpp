@@ -6,9 +6,11 @@
 #include "Arduino.h"
 #include "MorseTalk.h"
 
-MorseTalk::MorseTalk(int speakerPin, int tiltLedPin) {
+MorseTalk::MorseTalk(int speakerPin, int mainLedPin, int tiltLedPin) {
   _speakerPin = speakerPin;
+  _mainLedPin = mainLedPin;
   _tiltLedPin = tiltLedPin;
+  pinMode(_mainLedPin, OUTPUT);
   pinMode(_tiltLedPin, OUTPUT);
   _tilted = false;
   _lastTime = millis();
