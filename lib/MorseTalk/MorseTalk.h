@@ -105,11 +105,14 @@ class MorseTalk {
   public:
     MorseTalk(int speakerPin, int mainLedPin, int tiltLedPin);
     void process();
+    void voiceOn();
+    void voiceOff();
     //void setTiltCallback(tiltCallback); // setar a função de callback quando der algum "tilt"
   private:
     int _speakerPin;
     int _mainLedPin;
     int _tiltLedPin;
+    boolean _hasVoice;
     unsigned long _lastTime; // Armazenará o tempo do último processamento, será usado para controlar se o loop da aplicação está muito alto
     void _checkTime(); // Verificará se o tempo desde a última execução foi muito alto, ficará responsável por atualizar _lastTime
     // _tiltCallback; // Armazenar uma função que vou chamar caso tenha alguma coisa fora do esperado

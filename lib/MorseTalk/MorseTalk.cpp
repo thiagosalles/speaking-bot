@@ -19,9 +19,22 @@ MorseTalk::MorseTalk(int speakerPin, int mainLedPin, int tiltLedPin) {
 void MorseTalk::process() {
   if (!_tilted) {
     _checkTime();
-    //tone(_speakerPin, NOTE_C4);
-    //noTone(_speakerPin);
+    if (_hasVoice) {
+      tone(_speakerPin, NOTE_C3);
+      digitalWrite(_mainLedPin, HIGH);
+    } else {
+      noTone(_speakerPin);
+      digitalWrite(_mainLedPin, LOW);
+    }
   }
+}
+
+void MorseTalk::voiceOn() {
+  _hasVoice = true;
+}
+
+void MorseTalk::voiceOff() {
+  _hasVoice = false;
 }
 
 void MorseTalk::_checkTime() {
