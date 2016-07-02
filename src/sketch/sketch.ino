@@ -26,9 +26,7 @@ void loop() {
 
   buttonState = digitalRead(BUTTON_PIN);
   if (buttonState == HIGH) {
-    morseTalk.voiceOn();
-  } else {
-    morseTalk.voiceOff();
+    morseTalk.say("S.o.s.");
   }
 }
 

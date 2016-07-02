@@ -25,8 +25,7 @@ To find it:
  - Open the IDE;
  - Go to Preferences on the menu;
  - Check the path in SketchBook Location.
- - 
-Inside this path should be a folder called _libraries_. If it does not exist, create it. 
+ - Inside this path should be a folder called _libraries_. If it does not exist, create it. 
 
 This is the correct place to put our libraries so the IDE can load it.
 
